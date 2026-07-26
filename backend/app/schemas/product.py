@@ -32,7 +32,7 @@ class ProductResponse(ProductBase):
     category: CategoryResponse = Field(..., description="The category of the product.")
 
     class Config:
-        form_attributes = True
+        from_attributes = True
 
 
 class ProductListResponse(BaseModel):
