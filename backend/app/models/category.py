@@ -1,5 +1,5 @@
 import re
-from sqlalchemy import column, Integer, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from ..database import Base
 
@@ -8,9 +8,9 @@ class Category(Base):
 
     __tablename__ = "categories"
 
-    id = column(Integer, primary_key=True, index=True)
-    name = column(String, unique=True, nullable=False, index=True)
-    slug = column(String, unique=True, nullable=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, unique=True, nullable=False, index=True)
+    slug = Column(String, unique=True, nullable=True, index=True)
 
     products = relationship("Product", back_populates="category")
 

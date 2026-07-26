@@ -14,7 +14,7 @@ class Product(Base):
     price = Column(Float, nullable=False)
     image_url = Column(String)
     category_id = Column(Integer, ForeignKey("categories.id"), nullable=False)
-    created_at = Column(DateTime, default=datetime.timezone.now)
+    created_at = Column(DateTime, default=datetime.utcnow)
 
     category = relationship("Category", back_populates="products")
 
