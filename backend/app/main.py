@@ -32,8 +32,8 @@ def on_startup():
 
 @app.get('/')
 def root():
-    return {'messege': 'Welcome to fastapi shop API', "docs": "api/docs"}
+    return {'message': 'Welcome to fastapi shop API', "docs": "api/docs"}
 
-@app.get('health')
+@app.get('/health')
 def health_check():
     return {'status': 'healthy'}
